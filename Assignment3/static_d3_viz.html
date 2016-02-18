@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 3: Static Visualization in D3</title>
+	<script type="text/javascript" src="d3/d3.js"></script>
+</head>
+<body>
+	<h1 style="text-align:center">Assignment 3: Static Visualization in D3</h1>
+	<h2 style="text-align:center">Daniel Dowler | 2/16/2016</h2>
+
+	<div id="mydiv" width="550" height="200" style="background-color:#ffebcc; text-align:center"></div>
+
+	<script type="text/javascript">
+/*		I downloaded a new game called "Bricks Demolition" on my phone. 
+		I played it 20 times, and here are my resulting scores in order. 
+*/		
+		var dataset 	= [34,41,43,36,54,37,40,43,72,46,
+						   38,40,56,62,58,53,54,56,58,63];
+
+		var w  			= 500;
+		var h 			= 100; 
+		var barPadding	= 1;
+
+		var svg		 	= d3.select("#mydiv")
+			  				.append("svg")
+			  				.attr("width",w)
+			  				.attr("height",h)
+
+		/*<rect "id"="myrect" "x"="0" "y"="0" "width"="500" "height"="100" "fill"="rgb(255, 235, 204,.1)"/>;*/
+		svg.selectAll("rect")
+		   .data(dataset)
+		   .enter()
+		   .append("rect")
+		   .attr("width",25-barPadding)
+		   .attr("height",function(d){
+		   		return d;
+		   })
+		   .attr("y",function(d){
+		   		return h-d;
+		   })
+		   .attr("x",function(d,i){
+		   		return i*25;
+		   })
+		   .attr("fill","rgba(100,80,255,1)");
+
+/*		svg.append("rect")
+		   .attr("x","0")
+		   .attr("y","0")
+		   .attr("width",w)
+		   .attr("height",h)
+		   .attr("fill","rgba(255, 235, 204,.5)");
+*/
+		svg.selectAll("text")
+		   .data(dataset)
+		   .enter()
+		   .append("text")
+		   .text(function(d){return d})
+		   .attr({
+		   		x:function(d,i){return i*25+5.2},
+		   		y:function(d){return h-d+15},
+		   		"font-family":"sans-serif",
+		   		"fill":"white",
+		   		"font-size":"11px"
+		   })
+
+		d3.select("#mydiv")
+		  .append("p")
+		  .text("I downloaded a new game called \"Bricks Demolition\" on my phone.\n \
+		         I played it 20 times. Here are my resulting scores in order.")
+	</script>
+	<p>Done!</p>
+	</body>
+	</html>
