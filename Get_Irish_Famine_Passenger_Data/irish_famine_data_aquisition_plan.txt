@@ -1,0 +1,29 @@
+
+#===============================================================================
+# Irish Famine Header Data
+#(highest value is 5730, 
+# total observations < 4000
+# Passenger total for each ship is less than 1000)
+#===============================================================================
+
+MANIFEST IDENTIFER NUMBER	SHIP NAME	CODE FOR SHIP PORT OF EMBARKATION	SHIP ARRIVAL DATE	NUMBER OF CORRESPONDING PASSENGERS
+	5730	ONWARD	CORK & LIVERPOOL	12/11/1851	357
+	5729	LEVANT	DUBLIN	12/09/1851	205
+	5728	FLORIDA	LIVERPOOL	11/28/1851	371
+
+
+LINK TO DOWNLOAD
+(between values)
+#===============================================================================
+https://aad.archives.gov/aad/download-results?ft=R&dt=1613&sc=22506%2C22508%2C22509%2C22511%2C22513&cat=GP44&tf=F&bc=%2Csl%2Cfd&q=&as_alq=&as_anq=&as_epq=&as_woq=&nfo_22506=N%2C8%2C1900&op_22506=8&
+
+txt_22506=%d&
+txt_22506=%d&
+
+nfo_22508=V%2C21%2C1900&op_22508=0&txt_22508=&nfo_22509=V%2C3%2C1900&cl_22509=&nfo_22511=D%2C10%2C1846&op_22511=3&txt_22511=&txt_22511=&nfo_22513=N%2C3%2C1900&op_22513=6&txt_22513=&txt_22513=&mtch=222&dl=783
+
+
+#===============================================================================
+# Irish Famine Passenger Data
+#===============================================================================
+
